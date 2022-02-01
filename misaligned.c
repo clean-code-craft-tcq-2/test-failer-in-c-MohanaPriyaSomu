@@ -23,10 +23,10 @@ int printColorMap() {
         for(j = 0; j < 5; j++)
 		{
 			
-			Pair[ArrayIndex].pairNo = i * 5 + j;
+			Pair[ArrayIndex].pairNo = ArrayIndex;
 			strcpy(Pair[ArrayIndex].MajorColor , majorColor[i]);
 			strcpy(Pair[ArrayIndex].MinorColor , minorColor[i]);
-			printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);	
+			printf("%d | %s | %s\n", ArrayIndex, majorColor[i], minorColor[i]);	
 		        ArrayIndex++;				          
         }
     }

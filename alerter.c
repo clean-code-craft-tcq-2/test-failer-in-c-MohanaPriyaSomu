@@ -42,7 +42,7 @@ int main() {
     alertInCelcius(303.6, &FahrenheitToCelsius, &networkAlertStub);  
     alertInCelcius(250.7, &FahrenheitToCelsius, &networkAlertStub);
     alertInCelcius(700.9, &FahrenheitToCelsius, &networkAlertStub);
-    assert(alertFailureCount == );
+    assert(alertFailureCount == 2);
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
     return 0;

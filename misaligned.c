@@ -23,10 +23,10 @@ int printColorMap() {
         for(j = 0; j < 5; j++)
 		{
 			
-			Pair[ArrayIndex].pairNo = i * 5 + j;
+			Pair[ArrayIndex].pairNo = ArrayIndex;
 			strcpy(Pair[ArrayIndex].MajorColor , majorColor[i]);
-			strcpy(Pair[ArrayIndex].MinorColor , minorColor[i]);
-			printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);	
+			strcpy(Pair[ArrayIndex].MinorColor , minorColor[j]);
+			printf("%d | %s | %s\n", ArrayIndex, majorColor[i], minorColor[j]);	
 		        ArrayIndex++;				          
         }
     }
@@ -36,9 +36,9 @@ int printColorMap() {
 int main() {
     int result = printColorMap();
     assert(result == 25);
-	assert(Pair[10].pairNo == 10);	
-	assert(strcmp(Pair[10].MajorColor, "Red") == 0);
-	assert(strcmp(Pair[10].MinorColor, "Slate") == 0);
+    assert(Pair[10].pairNo == 10);	
+    assert(strcmp(Pair[10].MajorColor, "Red") == 0);
+    assert(strcmp(Pair[10].MinorColor, "Slate") == 0);
     printf("All is well (maybe!)\n");
     return 0;
 }

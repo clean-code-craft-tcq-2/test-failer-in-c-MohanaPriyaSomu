@@ -25,7 +25,7 @@ int networkAlertStub(float celcius) {
 	}
 }
 
-void alertInCelcius(float tempFarenheit, float *conversion(float), int *stub(int)) {
+void alertInCelcius(float tempFarenheit, float (*conversion)(float), int (*stub)(float)) {
     float tempCelcius = conversion(tempFarenheit);
     int returnCode = stub(tempCelcius);
     if (returnCode != 200) {
